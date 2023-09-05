@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  UrlMoodle: "https://e-linguo-moodle.com/",
+  UrlDolibarr: "https://infans.dolibarrgestion.fr/",
+  UrlSite:"https://moodle.infans.fr/"
 };
 
 /*

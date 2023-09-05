@@ -1,0 +1,19 @@
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //height: 100%; /* Utilise toute la hauteur de l'écran */
+    margin-top: 100px;
+  }
+
+  /* Facultatif : Ajustements de la largeur du formulaire */
+  ion-list {
+    max-width:auto; /* Ajustez selon vos préférences */
+    width: 100%;
+    padding: 16px 16px; /* Ajoutez un espace de remplissage sur les côtés */
+  }
+
+  /* Facultatif : Ajustements de l'espace entre les éléments */
+
+ 

@@ -1,3 +1,5 @@
+$button-primary-background: #e8ff38fe;
+$button-primary-text: #ffffff;
 #container {
   text-align: center;
 
@@ -24,4 +26,22 @@
 
 #container a {
   text-decoration: none;
+}
+.btn{
+  position: relative;
+  background-color: $button-primary-background !important;
+  color: $button-primary-text !important;
+  
+
+}
+.btn_accueil{
+  margin-top: 0px;
+}
+.ion-list{
+  width: auto;
+}
+.one{
+  margin-top: 0px;
+  border-radius: 50%;
+  overflow: hidden;
 }

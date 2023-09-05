@@ -1,0 +1,26 @@
+
+
+<ion-content class="content-center">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nom d'utilisateur</ion-label>
+      <ion-input type="email" placeholder="Nom utilisateur"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input color="light" type="password" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-item >
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label class="remembre" text-center>Se souvenir du nom d'utilisateur</ion-label>
+  </ion-item>
+
+  <ion-button expand="full" fill="solid" (click)="login()" shape="round">Connexion</ion-button>
+
+  <ion-button expand="full" fill="clear" color="medium" (click)="forgotPassword()" shape="round">Nom ou mot de passe oublié ?</ion-button>
+  
+  <ion-button expand="full" fill="outline" color="primary" (click)="testFree()" shape="round">Tester gratuitement</ion-button>
+</ion-content>
