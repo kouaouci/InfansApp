@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/Authentification/service/auth-service.service';
 
 @Component({
@@ -8,27 +8,31 @@ import { AuthServiceService } from 'src/Authentification/service/auth-service.se
   styleUrls: ['./connexion.page.scss'],
 })
 export class ConnexionPage  {
+  loginForm: FormGroup;
 
-  constructor(private authService:AuthServiceService) { }
-
- 
-  login(username : string, password:string){
-    this.authService.login(username,password).subscribe(
-      (Response)=>{
-        console.log('Connecter avec succes:',Response);
-      
-      },
-      (error)=>
-      console.error('Erreur de connexion:',error)
-
-    )
-
+  constructor(private formBuilder: FormBuilder) {
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+      rememberMe: [false],
+    });
   }
-  testFree(){
-    
-  }
-  forgotPassword(){
+  login() {
+    if (this.loginForm.valid) {
+      // Vous pouvez accéder aux valeurs du formulaire avec this.loginForm.value
+      const email = this.loginForm.value.email;
+      const password = this.loginForm.value.password;
+      const rememberMe = this.loginForm.value.rememberMe;
 
+      // Ajoutez ici la logique de connexion en utilisant les valeurs du formulaire
+      console.log('E-mail:', email);
+      console.log('Mot de passe:', password);
+      console.log('Se souvenir de moi:', rememberMe);
+
+      // Réinitialiser le formulaire après la connexion
+      this.loginForm.reset();
+    }
   }
+
 
 }

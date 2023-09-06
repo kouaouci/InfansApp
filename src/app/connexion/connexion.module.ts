@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 
 import { ConnexionPageRoutingModule } from './connexion-routing.module';
 
-import { ConnexionPage } from './connexion.page';
 import { IonicModule } from '@ionic/angular';
 
 @NgModule({
@@ -16,6 +15,6 @@ import { IonicModule } from '@ionic/angular';
     IonicModule,
     ConnexionPageRoutingModule,
   ],
-  declarations: [ConnexionPage]
+  declarations: []
 })
 export class ConnexionPageModule {}
